@@ -9,202 +9,37 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
   <body>
-    <div class="content">
-      <nav id="navigation">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="work.html">Work</a></li>
-            <li><a href="https://github.com/thomasoide">Github</a></li>
-            <li><a href="ThomasOideResume.pdf">Resume</a></li>
-          </ul>
-      </nav>
-
-      <div class="gradient top">
-          <h1 class="header">Work</h1>
+    <div class="container">
+      <div class="content">
+        <h1 class="hed">work examples</h1>
+        <p>Here are some of my best work examples from my time at the Star Tribune. For many of these projects, I designed and developed the project from back to front.</p>
+        <ul class="work">
+          <li>
+            <a href="https://www.startribune.com/tracking-coronavirus-in-minnesota/568712601/"><b>Tracking Coronavirus in Minnesota</b> (Svelte.js, D3.js)</a>
+          </li>
+          <li>
+            <a href="https://www.startribune.com/what-you-need-to-know-about-minnesota-s-covid-19-vaccine-plan/573336221/"><b>Tracking COVID-19 vaccinations in Minesota</b> (Svelte.js, D3.js)</a>
+          </li>
+          <li>
+            <a href="https://www.startribune.com/2020-minnesota-election-results-live-president-joe-biden-donald-trump-congress-senate-smith-lewis-house-legislature-votes/572649921/"><b>Minnesota election results 2020</b> (Svelte.js, D3.js)</a>
+          </li>
+          <li>
+            <a href="https://www.startribune.com/2020-minnesota-election-results-live-local-courts-judicial-races-city-mayor-council-county-school-board/572649941/"><b>Minnesota local election results 2020</b> (Svelte.js, D3.js)</a>
+          </li>
+          <li>
+            <a href="https://www.startribune.com/minnesota-voters-guide-2020-election-senate-house-candidates-who-is-running-gop-dfl-issues/572227401/"><b>2020 Minnesota Election Guide</b> (Svelte.js, Python)</a>
+          </li>
+          <li>
+            <a href="https://www.startribune.com/take-a-guided-photo-tour-of-minneapolis-in-1907-with-this-astonishing-interactive-panoramic/560055031/"><b>Take a guided photo tour of Minneapolis in 1907</b> (Leaflet.js, Javascript)</a>
+          </li>
+          <li>
+            <a href="https://www.startribune.com/see-how-the-minnesota-twins-broke-team-home-run-record/525532191/"><b>Bombas away: See how the Twins broke MLB home run record</b> (D3.js)</a>
+          </li>
+          <li>
+            <a href="https://www.startribune.com/see-the-stories-behind-startribune-instagram-photos/512741511/"><b>See the stories behind Star Tribune Instagram photos</b> (Django, jQuery)</a>
+          </li>
+        </ul>
       </div>
-
-      <div class="wrapper">
-        <div class="resumeBlock">
-
-          <div class="resWrapper">
-            <div id="resHeader">
-              <h3 class="resHead">THE STAR TRIBUNE</h3>
-            </div>
-            <div class="body">
-              <p>
-                I'm currently a designer and developer on the Star Tribune's digital design team, doing a combination of page design, data visualization and full-stack engineering for news products.
-                I do most of my work with Python, Javascript and HTML/CSS, but am free to experiment with different languages and packages in this role.
-                I believe in flexible solutions and using the language/stack that best suits the problem in front of me, especially when journalistic problems are almost never the same.
-              </p>
-            </div>
-          </div>
-
-          <hr />
-
-          <div class="resWrapper">
-            <div id="resHeader">
-              <h3 class="resHead">THE RIGHT TO KNOW NETWORK</h3>
-            </div>
-            <div class="body">
-              <p>
-                I'm one of the developers on a three-person team responsible for reengineering and redesigning The Houston Chronicle's Right to Know Network, a website hosting EPA databases tracking toxic and flammable chemicals at factories across the country.
-                I'm mostly working on writing server-side code, completely reengineering the ETL process, but I'm also working on front-end development and UX design. The site went <a class="link" href="https://rtk.rjifuture.org">live</a> at the 2019 IRE Conference in Houston. You can see the source code <a class="link" href="https://github.com/rji-futures-lab/django-rmp-data">here</a>
-              </p>
-            </div>
-          </div>
-
-          <hr />
-
-          <div class="resWrapper">
-            <div id="resHeader">
-              <h3 class="resHead">THE COLUMBIA MISSOURIAN</h3>
-            </div>
-            <div class="body">
-              <p>
-                I spent the 2018-2019 school year working for the Columbia Missourian, first as a state government reporter and then as a graphic designer. I also spent the spring of 2017 covering higher education.
-              </p>
-              <p>
-                I've focused most of this year on applying my development and coding skills to journalism. I analyzed a decade of school suspension data in Missouri that led to <a class="link" href="https://www.columbiamissourian.com/news/k12_education/disparities-in-suspensions-stack-the-odds-against-missouri-s-black/article_8acaadc0-0470-11e9-b0c6-d798ac90697f.html">this story.</a>
-                I also built <a class="link" href="https://n5iu4pwcrb.execute-api.us-east-2.amazonaws.com/schools">this accompanying search tool</a> using the Python web framework Django so that our readers could explore the data for themselves.
-              </p>
-              <p>
-                On the graphics desk this spring, I built <a class="link" href="https://observablehq.com/@thomasoide/missouris-chlorinated-small-water-systems">this map</a> using D3 and Observable to give statewide context for a story about aging water systems in Missouri.
-                I also used code to streamline one of our workflows: A graphic that shows where a bill is in the legislative process. I built <a class="link" href="https://observablehq.com/@thomasoide/missouri-legislature-house-bill-process">two Observable notebooks</a> so that reporters could not only create the graphic, but also customize the headline and summary of the graphic so that readers could have context about what the bill would do if passed.
-              </p>
-              <p>
-                I also spent the spring of 2018 working on a searchable salary database web application (<a class="link" href="https://github.com/thomasoide/salary_proj">source code</a>), using the Express Node.js framework and MySQL.
-              <p>
-                If you want to see my reporting work, here's <a class="link" href="https://www.columbiamissourian.com/users/profile/thomas%20oide/">the link to my author profile</a>, but below are some of my favorite stories from my time at the Missourian.
-              </p>
-            </div>
-            <ul class="resume">
-              <li>
-                <a href="https://www.columbiamissourian.com/news/elections/redistricting-explained-a-look-at-the-clean-missouri-amendment/article_afab20ca-d798-11e8-8607-4322007efb62.html">Redistricting explained: A look at the 'Clean Missouri' amendment</a>
-              </li>
-              <li>
-                <a href="https://www.columbiamissourian.com/news/local/kansas-city-to-st-louis-in-less-than-minutes-new/article_60838bea-1e17-11e7-bd60-17b127a1202d.html">Kansas City to St. Louis in less than 30 minutes? New technology may make it possible</a>
-              </li>
-              <li>
-                <a href="https://www.columbiamissourian.com/news/higher_education/fueled-by-love-of-games-mu-professor-creates-successful-board/article_1415f2a4-fd3b-11e6-8a07-5303668233d9.html">Fueled by love of games, MU professor creates successful board game of his own</a>
-              </li>
-            </ul>
-          </div>
-
-          <hr />
-
-          <div class="resWrapper">
-            <div id="resHeader">
-              <h3 class="resHead">THE BOSTON GLOBE</h3>
-            </div>
-            <div class="body">
-              <p>
-                In the summer of 2018, I was a metro reporting intern at The Boston Globe. I wrote a mixture of daily stories with features that took a few days to report.
-                Here are a few of my favorite stories from the summer:
-              </p>
-            </div>
-            <ul class="resume">
-              <li>
-                <a href="https://www.bostonglobe.com/metro/2018/06/10/miles-from-home-israeli-band-brothers-seeks-healing/Uj9whe51Q6yavIoMgA14bO/story.html">Miles from home, an Israeli band of brothers seeks healing</a>
-              </li>
-              <li>
-                <a href="https://www.bostonglobe.com/metro/2018/07/31/mass-state-police-vow-keep-watch-over-blandford-after-police-force-walks-out/TfgZDwEbIQjvlxtr4RFFTO/story.html">In tiny Blandford, frustrations over equipment and working conditions prompted police resignations</a>
-              </li>
-              <li>
-                <a href="https://www.bostonglobe.com/metro/2018/07/15/magic-vibe-boston-harbor-islands-linger/Yq0NDo6uN86RGY0neg5DWM/story.html">Magic, vibe of the Harbor Islands linger</a>
-              </li>
-              <li>
-                <a href="https://www.bostonglobe.com/metro/2018/07/23/faneuil-hall-dance-crews-wow-crowds-bring-positivity/8vn7vksXncGg9WRKMkQEGK/story.html">Faneuil Hall dance crews wow crowds, bring postitivity</a>
-              </li>
-            </ul>
-          </div>
-
-          <hr />
-
-          <div class="resWrapper">
-            <div id="resHeader">
-              <h3 class="resHead">THE SACRAMENTO BEE</h3>
-            </div>
-            <div class="body">
-              <p>
-                I spent the summers after my freshman and sophomore years at The Sacramento Bee, my hometown paper.
-                I spent the summer of 2017 on the Real-Time desk as a hybrid copy editor/night editor/digital producer.
-                The Real-Time desk was my first exposure to using analytics with journalism: I was tasked with writing quick posts on trending topics to generate page views for the website. That summer, I generated over 700,000 page views for the site.
-              </p>
-              <p>
-                The summer before that, I was a metro reporting intern. Here are some of my highlights from that summer:
-              </p>
-            </div>
-            <ul class="resume">
-              <li>
-                <a href="https://www.sacbee.com/news/local/environment/article86126787.html">Dead sycamores in Land Park stump residents, arborists</a>
-              </li>
-              <li>
-                <a href="https://www.sacbee.com/news/local/article84134342.html">Galt brewery with controversial name — Special Ed's — vandalized</a>
-              </li>
-              <li>
-                <a href="https://www.sacbee.com/news/local/health-and-medicine/article94382222.html">Mother forms a community of families affected by rare syndrome</a>
-              </li>
-            </ul>
-          </div>
-
-          <hr />
-
-          <div class="resWrapper">
-            <div id="resHeader">
-              <h3 class="resHead">THE MANEATER</h3>
-            </div>
-            <div class="body">
-              <p>
-                I worked for The Maneater during the University of Missouri race protests that made national news in fall 2015.
-                I developed relationships with the protesters, Concerned Student 1950, and wrote about them extensively throughout the school year.
-                Here is <a class="link" href="https://www.themaneater.com/staff/thomas-oide">my author profile</a> and a few of my favorite stories:
-              </p>
-            </div>
-            <ul class="resume">
-              <li>
-                <a href="https://www.themaneater.com/stories/uwire/concerned-student-1950-plans-continue-educate-stud">Concerned Student 1950 plans to continue to educate students, raise awareness</a>
-              </li>
-              <li>
-                <a href="https://www.themaneater.com/stories/uwire/concerned-student-1950-hopes-targeted-hiring-would">Concerned Student 1950 hopes targeted hiring would increase mentorship</a>
-              </li>
-              <li>
-                <a href="https://www.themaneater.com/stories/uwire/racism-lives-here-organizer-reuben-faloughi-looks-">“Racism Lives Here” organizer Reuben Faloughi looks to change race culture at MU</a>
-              </li>
-            </ul>
-          </div>
-
-          <hr />
-
-          <div class="resWrapper">
-            <div id="resHeader">
-              <h3 class="resHead">THE DAVIS ENTERPRISE</h3>
-            </div>
-            <div class="body">
-              <p>
-                I was the high school sports reporter for my local newspaper, The Davis Enterprise, while I was a high school student.
-                Here's <a class="link" href="https://www.davisenterprise.com/author/thomasoide/">my author profile.</a>
-              </p>
-            </div>
-          </div>
-
-        </div>
-
-      <div id="social">
-        <a href="https://www.facebook.com/thomas.oide.5" class="fa fa-facebook"></a>
-        <a href="https://github.com/thomasoide" class="fa fa-github"></a>
-        <a href="https://twitter.com/thomasoide" class="fa fa-twitter"></a>
-        <a href="https://www.linkedin.com/in/thomasoide/" class="fa fa-linkedin-square"></a>
-      </div>
-    </div>
-
-
-
-      <footer>
-        <p class="footerText">
-          Thomas Oide, All Rights Reserved
-        </p>
-      </footer>
-
     </div>
   </body>
 </html>
