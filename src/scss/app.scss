@@ -1,0 +1,29 @@
+/* Write your global styles here, in SCSS syntax. Variables and mixins from the src/variables.scss file are available here without importing */
+
+@import 'variables';
+@import 'functions'; 
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,100&family=Zen+Old+Mincho&display=swap');
+
+// global element styles 
+body {
+    margin: 0; 
+}
+
+h1 {
+    font-family: $font-zen;
+    color: $color-black;
+    font-size: 3.5rem;
+    word-break: normal;
+    margin: 0;
+}
+
+p {
+    font-family: $font-poppins; 
+    @include font-clamp(14px, 16px);
+    color: $color-black;
+}
+
+a {
+    color: #4D9DE0; 
+}
