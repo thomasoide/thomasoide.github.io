@@ -1,0 +1,117 @@
+@use 'sass:math';
+@use 'sass:list';
+@import 'variables';
+
+/*=================================
+=            Functions            =
+=================================*/
+
+$browser-context: 16px;
+
+@function rems($size) {
+	@if is-px($size) == false {
+		$size: $size * 1px;
+	}
+
+	$rem-size: math.div($size, $browser-context);
+	@return $rem-size * 1rem;
+}
+
+@function em($pixels, $context: $browser-context) {
+	@if (unitless($pixels)) {
+		$pixels: $pixels * 1px;
+	}
+
+	@if (unitless($context)) {
+		$context: $context * 1px;
+	}
+
+	@return math.div($pixels, $context) * 1em;
+}
+
+@function is-number($value) {
+	@return type-of($value) == 'number';
+}
+
+@function is-px($value) {
+	@return is-number($value) and index('px', unit($value)) != null;
+}
+
+// Calculates the slope based off the min/max font size and min/max widths.
+@function calc-slope($min-font-size, $max-font-size) {
+	$font-size-diff: $max-font-size - $min-font-size;
+
+	$result: math.div($font-size-diff, $breakpoints-width-diff);
+
+	@return $result;
+}
+
+// Returns the preferred value for the font-clamp mixin based on the min/max font sizes.
+@function calc-preferred-font-value($min-font-size, $max-font-size) {
+	$slope: calc-slope($min-font-size, $max-font-size);
+
+	$intersection: -($breakpoints-min-width) * $slope + $min-font-size;
+
+	@return ($intersection, ($slope * 100vw));
+}
+
+
+@mixin mq(
+	$break,
+	$dir: 'min-width',
+	$until: null,
+	$breakpoints-map: $breakpoints
+) {
+	@if not map-has-key($breakpoints-map, $break) {
+		$break: $break;
+	} @else {
+		$break: map-get($breakpoints-map, $break);
+	}
+
+	@if $break and $until {
+		@if not map-has-key($breakpoints-map, $until) {
+			$until: $until;
+		} @else {
+			$until: map-get($breakpoints-map, $until);
+		}
+
+		@media screen and (min-width: $break) and (max-width: $until) {
+			@content;
+		}
+	} @else {
+		@media screen and ($dir: $break) {
+			@content;
+		}
+	}
+}
+
+// Rem output with px fallback
+@mixin font-size($size) {
+	font-size: $size; //Fallback in px
+	font-size: rems($size);
+}
+
+// Font scales in size with the smallest media query size allowed to the ideal and largest.
+// Parameters are the minimum and maximum font size(px) as dictated in Figma.
+// Taken from: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
+@mixin font-clamp($min, $max) {
+	$min-font-size: rems($min);
+	$max-font-size: rems($max);
+
+	$preferred-value: calc-preferred-font-value($min-font-size, $max-font-size);
+
+	$preferred-font-size: list.nth($preferred-value, 1);
+
+	$preferred-vw: list.nth($preferred-value, 2);
+
+	font-size: $min; //Fallback in px
+	font-size: $min-font-size;
+
+	/* stylelint-disable */
+	font-size: clamp(
+		#{$min-font-size},
+		calc(#{$preferred-font-size} + #{$preferred-vw}),
+		#{$max-font-size}
+	);
+	/* stylelint-enable */
+}

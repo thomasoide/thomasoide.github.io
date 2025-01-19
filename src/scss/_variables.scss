@@ -1,0 +1,20 @@
+/* Variables and mixins declared here will be available in all other SCSS files */
+
+@use 'sass:map';
+@use 'sass:list';
+
+$font-zen: Zen Old Mincho, serif; 
+$font-poppins: Poppins, sans-serif; 
+
+$color-green: #61C9A8;
+$color-red: #FA7167;
+$color-yellow: #F4D06F;
+$color-purple: #EEEEFF;
+$color-black: #0B2027; 
+$color-link: #4D9DE0; 
+
+// Used to calculate font size in font-clamp mixin.
+$breakpoints-min-width: 20.563rem;
+$breakpoints-max-width: 49.063rem;
+$breakpoints-width-diff: 28.5rem;
+
