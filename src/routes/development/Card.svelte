@@ -9,7 +9,7 @@
     <figure class="image">
         {#if record.label === "Hermes"}
             <video controls>
-                <source src="/src/lib/img/hermes.mp4" type="video/mp4">
+                <source src={record.img} type="video/mp4">
             </video>
         {:else}
             <img src={record.img} />
