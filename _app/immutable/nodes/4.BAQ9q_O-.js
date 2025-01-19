@@ -1,0 +1,1 @@
+import{a as r,t as a}from"../chunks/disclose-version.a-8sFber.js";import"../chunks/legacy.x6oCihQV.js";import{s as m}from"../chunks/attributes.CUA1AhDm.js";const o=""+new URL("../assets/ThomasOideResume.BgcWcRt0.pdf",import.meta.url).href;var s=a('<iframe width="100%" height="800" title="PDF"></iframe>');function n(e){var t=s();m(t,"src",o),r(e,t)}export{n as component};
